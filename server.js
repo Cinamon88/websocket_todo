@@ -12,7 +12,7 @@ const io = socket(server);
 const tasks = [];
 
 
-app.use(express.static(path.join(__dirname, '/client/client/')));
+app.use(express.static(path.join(__dirname, '/client/client/build')));
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/client/client/build/index.html'));
